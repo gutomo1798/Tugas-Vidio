@@ -3,9 +3,6 @@ import {Switch,Route} from 'react-router-dom';
 
 import logo from './logo.svg';
 import './App.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
-
 import Navbar from './component/Navbar';
 import Productlist from './component/Productlist';
 import Detail from './component/Detail';
