@@ -7,24 +7,19 @@ import {ProductConsumer} from '../Context';
 
 
 class productlist extends Component {
-    state={
-        Products:storeProducts
-    }
-    render() {
-        console.log(this.state.Products);
+    render() {    
         return (
             <React.Fragment>
                <div className="py-5">
                    <div className="container">
-                       <Title Name="our"title="product"/>
+                       <Title Name="our" title="product"/>
                        <div className="row">
                            <ProductConsumer>
                                {value => {
-                                   return<h1>
-                                       {value}
-                                   </h1>;
-                               }
-                               }
+                                   return value.products.map(product=> {
+                                       return <Product key={product.id} product={product}/>
+                                   })
+                               }}
                            </ProductConsumer>
                        </div>
                    </div>
